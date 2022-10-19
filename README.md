@@ -1,3 +1,3 @@
 # bettafruits-website
 
-An FTP project
+An interesting FTP project
