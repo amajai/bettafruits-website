@@ -1,0 +1,285 @@
+/* 
+  CSS Properties: https://www.tutorialrepublic.com/css-reference/css3-properties.php
+  CSS Selectors: https://www.w3schools.com/cssref/css_selectors.asp
+  Text and Font
+  Images In CSS
+  Box : Margin, Border, Padding
+  px vs em vs rem : https://elementor.com/help/whats-the-difference-between-px-em-rem-vw-and-vh
+  Layout:  header, menus, content and footer - https://www.geeksforgeeks.org/css-website-layout
+  Flexbox
+  Responsiveness:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/, https://www.w3.org/TR/CSS2/media.html
+
+  Understanding CSS pre-processor 
+  Sass/Scss
+*/
+
+html{
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.bg-green {
+  background-color: #4caf50;
+}
+
+/* HEADER */
+header {
+  padding: 10px;
+  text-align: center;
+}
+
+header span {
+  font-size: 20px;
+  display: inline-block;
+}
+
+.logo {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  border: 1px solid white;
+  padding: 10px;
+  background-color: rgb(89, 158, 89);
+}
+
+.logo .logo-highlight{
+  color: black;
+  font-size: 1em;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav a:hover {
+  background-color: #4caf50;
+  color: white;
+  transition: .4s ease-in;
+}
+
+.banner{
+  height: 500px;
+  background-image: url("/assets/images/fruits-pattern.jpg");
+  background-color: #fff;
+  background-repeat: repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.banner img{
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.banner .content{
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #4caf50;
+  transform: translate(-50%,-50%);
+}
+
+.content{
+  padding: 10px 20px;
+  text-align: center;
+
+}
+
+#services{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-box img{
+  width: 100px;
+  margin: 50px 0;
+}
+
+.content-box{
+  width: 33%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.content-box:nth-child(2n-1){
+  background-color: #4caf50;
+}
+
+#info{
+  padding: 80px;
+  text-align: center;
+  background: #333;
+  color: white;
+  font-size: 10px;
+}
+
+#info h1{
+  font-size: 4em;
+}
+
+#info p{
+  font-size: 2em;
+}
+
+#info a {
+  color: #4caf50;
+}
+
+#info a:hover {
+  color: red;
+}
+
+footer{
+  padding: 20px 0;
+}
+
+h1 {
+  font-family: "K2D", sans-serif;
+}
+h3 {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: initial;
+  font-size: 1.5em;
+}
+
+.column {
+  margin-bottom: 10px;
+  float: left;
+  width: 32.33%;
+  background-color: #f1f1f1;
+  text-align: center;
+  height: 400px;
+}
+
+.box {
+  width: 32.63%;
+  background-color: #333;
+  padding: 30px;
+  border-radius: 5px;
+  float: left;
+  margin-right: 1%;
+  color: white;
+}
+
+.box:last-child {
+  margin-right: 0;
+}
+
+.box img {
+  border: 1px solid white;
+  margin: 10px 0;
+  height: 200%;
+  width: 100%;
+}
+
+.box span {
+  border: 1px solid white;
+  margin-top: 10px;
+  padding: 2%;
+  border-radius: 10px;
+  display: inline-block;
+  background-color: #4caf50;
+}
+
+.box a {
+  text-align: center;
+  color: white;
+}
+
+.box span:hover {
+  background-color: rgb(24, 53, 25);
+}
+
+.col {
+  padding: 20px 20px 0 20px;
+  text-align: center;
+}
+.col:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding-top: 20px;
+  position: relative;
+}
+
+footer span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 10px;
+  background-color: #333;
+  height: 50px;
+  width: 50px;
+  font-size: 0.8rem;
+  padding-top: 10px;
+  color: white;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 768px) {
+  .box {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+
+  .content-box{
+    width: 100%;
+  }
+
+  .banner img{
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .banner .content{
+    width: 300px;
+    font-size: .5em;
+  }
+  #info{
+    font-size: .5em;
+  }
+  footer{
+    font-size: .5em;
+  } 
+}
